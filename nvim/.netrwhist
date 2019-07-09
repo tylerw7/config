@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/tyler/.config/nvim'
-let g:netrw_dirhist_2='/home/tyler/Projects/csci5161/repo-webst377/A_04-Semantic-Analysis/mytests'
-let g:netrw_dirhist_3='/home/tyler/Projects/csci5161/repo-webst377/A_03-Parser'
-let g:netrw_dirhist_4='/home/tyler/Projects/csci5161/repo-webst377/A_03-Parser/mytests'
-let g:netrw_dirhist_5='/home/tyler/Projects/csci5161/repo-webst377/A_03-Parser'
-let g:netrw_dirhist_6='/etc/grub.d'
