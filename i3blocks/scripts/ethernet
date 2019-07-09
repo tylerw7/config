@@ -1,0 +1,6 @@
+#!/bin/bash
+
+addr=$(ip -h -f inet addr | grep enp3s0 | awk 'FNR == 2 {print $2}')
+
+printf "🌐 %s" $addr
+

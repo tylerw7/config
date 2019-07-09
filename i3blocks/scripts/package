@@ -1,0 +1,6 @@
+#!/bin/bash
+
+packages=$(apt list --upgradable | wc -l)
+
+printf "📦 %s" $packages
+

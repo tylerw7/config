@@ -1,0 +1,26 @@
+command=~/.config/i3blocks/scripts/$BLOCK_NAME
+
+[package]
+interval=3600
+# color=#cb4b16
+
+[home]
+interval=600
+
+[ram]
+interval=30
+
+[music]
+interval=once
+signal=10
+
+[sound]
+interval=once
+signal=9
+
+[ethernet]
+interval=30
+
+[date]
+interval=5
+

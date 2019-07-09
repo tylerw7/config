@@ -1,0 +1,6 @@
+#/bin/bash
+
+title="music"
+
+printf "🎼 %s" $title
+
