@@ -101,8 +101,6 @@ bindsym $mod+r mode "resize"
 
 ## Base16 Default Dark
 # Author: Chris Kempson (http://chriskempson.com)
-#
-# You can use these variables anywhere in the i3 configuration file.
 
 set $base00 #181818
 set $base01 #282828
@@ -123,8 +121,9 @@ set $base0F #a16946
 
 # Bar configuration using the Base16 variables.
 bar {
-    # status_command ~/Projects/i3status-rust/target/release/i3status-rs ~/.config/i3/status.toml
     status_command i3blocks
+    position top
+    height 22
 
     colors {
         background $base00
@@ -148,4 +147,14 @@ client.unfocused        $base01 $base00 $base05 $base01 $base01
 client.urgent           $base08 $base08 $base00 $base08 $base08
 client.placeholder      $base00 $base00 $base05 $base00 $base00
 client.background       $base07
+
+# no title bars, and small borders
+new_window none
+new_window pixel 2
+new_float none
+new_float pixel 2
+
+# default gap sizing
+set $gap_size 7
+gaps inner $gap_size
 

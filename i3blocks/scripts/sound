@@ -1,9 +1,7 @@
 #!/bin/bash
 
-muted=$(pulsemixer --get-mute)
-
-if [[ $muted -eq 0 ]]; then
-	volume=$(pulsemixer --get-volume | awk '{print $1}')
+if [[ $(pamixer --get-mute) = "false" ]]; then
+	volume=$(pamixer --get-volume | awk '{print $1}')
 	
 	if [[ $volume -le 33 ]]; then
 		printf "🔈 %d%%" $volume
