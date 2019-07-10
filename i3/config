@@ -121,6 +121,7 @@ set $base0F #a16946
 
 # Bar configuration using the Base16 variables.
 bar {
+    font pango:monospace 11
     status_command i3blocks
     position top
     height 22

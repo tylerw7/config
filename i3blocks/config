@@ -2,7 +2,7 @@ command=~/.config/i3blocks/scripts/$BLOCK_NAME
 
 [package]
 interval=3600
-# color=#cb4b16
+color=#cb4b16
 
 [home]
 interval=600
