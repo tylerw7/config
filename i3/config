@@ -27,7 +27,7 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # split in horizontal orientation
-#bindsym $mod+h split h
+bindsym $mod+h split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -121,7 +121,7 @@ set $base0F #a16946
 
 # Bar configuration using the Base16 variables.
 bar {
-    font pango:monospace 11
+    font pango:monospace 10
     status_command i3blocks
     position top
     height 22
@@ -158,4 +158,8 @@ new_float pixel 2
 # default gap sizing
 set $gap_size 7
 gaps inner $gap_size
+
+# extra stuff
+# set background with bg sym link
+exec feh --bg-scale .bg
 
