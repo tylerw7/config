@@ -39,7 +39,7 @@ alt + d
 
 # === Desktop Bindings ===
 # Lock
-alt + shift + l
+ctrl + shift + l
   i3lock -i ~/.bg
 
 # Shutdown, Reboot
