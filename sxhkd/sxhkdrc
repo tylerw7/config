@@ -1,0 +1,56 @@
+# === Volume Controls ===
+# volume up
+alt + shift + equal
+  ~/.scripts/inc_vol.sh
+
+# volume down
+alt + shift + minus
+  ~/.scripts/dec_vol.sh
+
+# mute
+alt + shift + m
+  ~/.scripts/tog_vol.sh
+
+# === Music (MPD) Controls ===
+# next track
+# alt + n
+
+# prev track
+# alt + p
+
+# next album
+# alt + shift + n
+
+# prev album
+# alt + shift + p
+
+# === Launch Programs ===
+# Terminal
+alt + Return
+  alacritty
+
+# Browser
+alt + b
+  firefox-developer-edition
+
+# Program launcher
+alt + d
+  dmenu_run
+
+# === Desktop Bindings ===
+# Lock
+alt + shift + l
+  i3lock -i ~/.bg
+
+# Shutdown, Reboot
+alt + x
+  ~/.scripts/prompt.sh "Reboot?" "reboot"
+alt + shift + x
+  ~/.scripts/prompt.sh "Shutdown?" "shutdown -h now"
+
+# Sleep
+
+# Screenshot (tmp)
+
+# Screenshot (permanent)
+
