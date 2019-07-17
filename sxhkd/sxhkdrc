@@ -1,28 +1,24 @@
 # === Volume Controls ===
 # volume up
-alt + shift + equal
+alt + equal
   ~/.scripts/inc_vol.sh
 
 # volume down
-alt + shift + minus
+alt + minus
   ~/.scripts/dec_vol.sh
 
 # mute
-alt + shift + m
+alt + m
   ~/.scripts/tog_vol.sh
 
 # === Music (MPD) Controls ===
-# next track
-# alt + n
+# next, prev track
+alt + {n,p}
+  mpc -q {next,prev}
 
-# prev track
-# alt + p
-
-# next album
-# alt + shift + n
-
-# prev album
-# alt + shift + p
+# play/pause
+alt + shift + p
+  mpc -q toggle
 
 # === Launch Programs ===
 # Terminal
