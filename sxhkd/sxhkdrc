@@ -18,7 +18,7 @@ alt + {n,p}
 
 # play/pause
 alt + shift + p
-  mpc -q toggle
+  mpc -q toggle && pkill -SIGRTMIN+10 i3blocks
 
 # === Launch Programs ===
 # Terminal
