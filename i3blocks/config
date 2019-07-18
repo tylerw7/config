@@ -11,8 +11,8 @@ interval=600
 interval=30
 
 [music]
-interval=once
-signal=10
+interval=1
+# signal=10
 
 [sound]
 interval=once

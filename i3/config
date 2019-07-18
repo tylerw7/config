@@ -123,7 +123,7 @@ set $base0F #a16946
 bar {
     font pango:monospace 10
     status_command i3blocks
-    position top
+    position bottom
     height 22
 
     colors {

@@ -1,6 +1,21 @@
-#/bin/bash
+#!/bin/bash
+# Get current song information and status
 
-title="music"
+# Base16 default dark - green and red
+red="#ab4642"
+green="#a1b56c"
 
-printf "🎼 %s" $title
+stat=$(mpc status)
+current=$(echo "$stat" |
+	awk 'FNR == 1 { SONG = $0 } FNR == 2 { print SONG,$2,$3,$4 }')
+paused=$(echo "$stat" | awk 'FNR == 2 { print $1 }')
+
+echo $current
+echo ""
+
+if [[ $paused == "[paused]" ]]; then
+	printf $red
+else
+	printf $green
+fi
 

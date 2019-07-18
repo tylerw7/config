@@ -3,3 +3,7 @@ pulse
 fish/fish_variables
 dconf
 gtk*
+mpd/database
+mpd/log
+mpd/pid
+mpd/state
