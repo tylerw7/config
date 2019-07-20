@@ -20,6 +20,12 @@ alt + {n,p}
 alt + shift + p
   mpc -q toggle && pkill -SIGRTMIN+10 i3blocks
 
+# seek backward, forward {5,30} sec
+alt + shift + s + {u,i}
+  mpc -q seek {-,+}00:00:05 && pkill -SIGRTMIN+10 i3blocks
+alt + shift + s {n,m}
+  mpc -q seek {-,+}00:00:30 && pkill -SIGRTMIN+10 i3blocks
+
 # === Launch Programs ===
 # Terminal
 alt + Return
