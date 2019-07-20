@@ -38,11 +38,13 @@ alt + d
 ctrl + shift + l
   i3lock -i ~/.bg
 
-# Shutdown, Reboot
+# Shutdown, Reboot, exit WM
 alt + x
   ~/.scripts/prompt.sh "Reboot?" "reboot"
 alt + shift + x
   ~/.scripts/prompt.sh "Shutdown?" "shutdown -h now"
+alt + shift + e
+  ~/.scripts/prompt.sh "Exit i3?" "i3-msg exit"
 
 # Sleep
 
