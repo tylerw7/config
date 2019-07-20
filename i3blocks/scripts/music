@@ -1,9 +1,9 @@
 #!/bin/bash
 # Get current song information and status
 
-# Base16 default dark - green and red
-red="#ab4642"
-green="#a1b56c"
+# Base16 google dark - green and red
+red="#f96a38"
+green="#198844"
 
 stat=$(mpc status)
 current=$(echo "$stat" |
