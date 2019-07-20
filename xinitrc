@@ -4,5 +4,6 @@ xrandr --output HDMI1 --mode 1920x1080 --rate 60 --output DP-1-2 --mode 2560x144
 compton --vsync -b &
 sxhkd &
 mpd &
+mpc volume 50 &
 mpc add / &
 exec i3

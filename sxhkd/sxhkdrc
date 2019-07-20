@@ -1,29 +1,25 @@
-# === Volume Controls ===
-# volume up
-alt + equal
-  ~/.scripts/inc_vol.sh
-
-# volume down
-alt + minus
-  ~/.scripts/dec_vol.sh
-
-# mute
-alt + m
-  ~/.scripts/tog_vol.sh
+# === System Volume Controls ===
+# volume {increase, decrease} by 5%
+alt + {i,u}
+  ~/.scripts/{inc,dec}_vol.sh
 
 # === Music (MPD) Controls ===
 # next, prev track
-alt + {n,p}
+ctrl + {j,k}
   mpc -q {next,prev}
 
 # play/pause
 alt + shift + p
   mpc -q toggle && pkill -SIGRTMIN+10 i3blocks
 
+# mpd volume {increase, decrease} by 5%
+alt + {n,m}
+  mpc -q volume {-,+}5
+
 # seek backward, forward {5,30} sec
 alt + shift + s + {u,i}
   mpc -q seek {-,+}00:00:05 && pkill -SIGRTMIN+10 i3blocks
-alt + shift + s {n,m}
+alt + shift + s + {n,m}
   mpc -q seek {-,+}00:00:30 && pkill -SIGRTMIN+10 i3blocks
 
 # === Launch Programs ===
@@ -31,9 +27,9 @@ alt + shift + s {n,m}
 alt + Return
   alacritty
 
-# Browser
-alt + b
-  firefox-developer-edition
+# Launch Programs {editor, web}
+alt + o; {e,w}
+  {emacs, firefox-developer-edition}
 
 # Program launcher
 alt + d
@@ -41,7 +37,7 @@ alt + d
 
 # === Desktop Bindings ===
 # Lock
-ctrl + shift + l
+super + l
   i3lock -i ~/.bg
 
 # Shutdown, Reboot, exit WM
