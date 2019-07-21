@@ -5,5 +5,4 @@ compton --vsync -b &
 sxhkd &
 mpd &
 mpc volume 50 &
-mpc add / &
 exec i3
