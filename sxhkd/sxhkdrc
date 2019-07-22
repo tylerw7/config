@@ -4,9 +4,9 @@ alt + {i,u}
   ~/.scripts/{inc,dec}_vol.sh
 
 # === Music (MPD) Controls ===
-# next, prev track
+# prev, next track
 ctrl + {j,k}
-  mpc -q {next,prev}
+  mpc -q {prev,next}
 
 # play/pause
 alt + shift + p
