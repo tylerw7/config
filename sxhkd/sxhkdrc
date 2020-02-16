@@ -40,13 +40,16 @@ alt + d
 super + shift + l
   i3lock -i ~/.bg
 
-# Shutdown, Reboot, exit WM
+# Shutdown, Reboot, exit WM, reload config
 alt + x
   ~/.scripts/prompt.sh "Reboot?" "reboot"
 alt + shift + x
   ~/.scripts/prompt.sh "Shutdown?" "shutdown -h now"
 alt + shift + e
   ~/.scripts/prompt.sh "Exit i3?" "i3-msg exit"
+# i3 uses alt + shift + r to reload
+super + shift + r
+  pkill -SIGUSR1 sxhkd
 
 # Sleep
 
