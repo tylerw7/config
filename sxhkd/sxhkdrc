@@ -37,7 +37,7 @@ alt + d
 
 # === Desktop Bindings ===
 # Lock
-super + l
+super + shift + l
   i3lock -i ~/.bg
 
 # Shutdown, Reboot, exit WM
