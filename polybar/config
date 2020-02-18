@@ -41,8 +41,7 @@ primary = ${self.base0A}
 secondary = ${self.base08}
 alert = ${self.base08}
 
-[bar/mybar]
-monitor = DP-1
+[base/bar]
 width = 100%
 height = 27
 ;offset-x = 1%
@@ -69,10 +68,6 @@ font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
-modules-left = i3
-; modules-center = mpd
-modules-right = filesystem pulseaudio xkeyboard memory cpu eth date
-
 tray-position = right
 tray-padding = 2
 ;tray-background = #0063ff
@@ -85,6 +80,20 @@ tray-padding = 2
 
 cursor-click = pointer
 cursor-scroll = ns-resize
+
+[bar/bar1]
+inherit = base/bar
+monitor = DP-1
+modules-left = i3
+; modules-center = mpd
+modules-right = filesystem pulseaudio xkeyboard memory cpu eth date
+
+[bar/bar2]
+inherit = base/bar
+monitor = HDMI-1
+modules-left = i3
+; modules-center =
+modules-right = date
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -121,7 +130,7 @@ index-sort = true
 wrapping-scroll = false
 
 ; Only show workspaces on the same output as the bar
-;pin-workspaces = true
+pin-workspaces = true
 
 label-mode-padding = 2
 label-mode-foreground = ${colors.base00}
