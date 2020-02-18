@@ -1,0 +1,256 @@
+[colors]
+; Base16 Tomorrow Night Theme
+; base00: Very Dark Blue
+; base01: Very Dark Blue (lighter than above)
+; base02: Very Dark Grayish Blue
+; base03: Dark grayish lime green
+; base04: Grayish lime green
+; base05: Grayish cyan - lime green
+; base06: Very light gray
+; base07: White
+; base08: Moderate red
+; base09: Soft orange
+; base0A: Soft orange (yellowish)
+; base0B: Slightly desaturated yellow
+; base0C: Slightly desaturated cyan
+; base0D: Slightly desaturated blue
+; base0E Grayish magenta
+; base0F: Mostly desaturated dark red
+base00 = #1d1f21 
+base01 = #282a2e 
+base02 = #373b41 
+base03 = #969896 
+base04 = #b4b7b4 
+base05 = #c5c8c6 
+base06 = #e0e0e0 
+base07 = #ffffff 
+base08 = #cc6666 
+base09 = #de935f 
+base0A = #f0c674 
+base0B = #b5bd68 
+base0C = #8abeb7 
+base0D = #81a2be 
+base0E = #b294bb 
+base0F = #a3685a 
+
+background = ${self.base00}
+background-alt = ${self.base01}
+foreground = ${self.base06}
+foreground-alt = ${self.base02}
+primary = ${self.base0A}
+secondary = ${self.base08}
+alert = ${self.base08}
+
+[bar/mybar]
+monitor = DP-1
+width = 100%
+height = 27
+;offset-x = 1%
+;offset-y = 1%
+radius = 6.0
+fixed-center = false
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+border-size = 4
+border-color = #1d1f2100
+
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = fixed:pixelsize=10;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:pixelsize=10;1
+
+modules-left = i3
+; modules-center = mpd
+modules-right = filesystem pulseaudio xkeyboard memory cpu eth date
+
+tray-position = right
+tray-padding = 2
+;tray-background = #0063ff
+
+;override-redirect = true
+;wm-restack = i3
+
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-underline = ${colors.secondary}
+
+label-layout = %layout%
+label-layout-underline = ${colors.secondary}
+
+label-indicator-padding = 2
+label-indicator-margin = 1
+label-indicator-background = ${colors.secondary}
+label-indicator-underline = ${colors.secondary}
+
+[module/filesystem]
+type = internal/fs
+interval = 30
+
+mount-0 = /
+mount-1 = /home
+
+; mount points text base0D color
+label-mounted = %{F#81a2be}%mountpoint%%{F-}: %used% / %total%%
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground-alt}
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+
+; Only show workspaces on the same output as the bar
+;pin-workspaces = true
+
+label-mode-padding = 2
+label-mode-foreground = ${colors.base00}
+label-mode-background = ${colors.primary}
+
+; focused = Active workspace on focused monitor
+label-focused = %index%
+label-focused-background = ${colors.background-alt}
+label-focused-underline= ${colors.primary}
+label-focused-padding = 2
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %index%
+label-unfocused-padding = 2
+
+; visible = Active workspace on unfocused monitor
+label-visible = %index%
+label-visible-background = ${self.label-focused-background}
+label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = ${self.label-focused-padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent = %index%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+
+; Separator in between workspaces
+; label-separator = |
+
+
+; [module/mpd]
+; type = internal/mpd
+; format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+
+; icon-prev = 
+; icon-stop = 
+; icon-play = 
+; icon-pause = 
+; icon-next = 
+
+; label-song-maxlen = 25
+; label-song-ellipsis = true
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = ${colors.base08}
+label = %percentage:2%%
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = ${colors.base0C}
+label = %gb_used% / %gb_total%
+
+[module/eth]
+type = internal/network
+interface = enp3s0
+interval = 3.0
+
+format-connected-underline = ${colors.base0B}
+format-connected-prefix = " "
+format-connected-prefix-foreground = ${colors.foreground-alt}
+label-connected = %local_ip%
+
+format-disconnected = <label-disconnected>
+format-disconnected-underline = ${self.format-connected-underline}
+label-disconnected = %ifname% disconnected
+label-disconnected-foreground = ${colors.foreground-alt}
+
+[module/date]
+type = internal/date
+interval = 5
+
+date = " %m-%d-%Y"
+date-alt = " %Y-%m-%d"
+
+time = %H:%M:%S
+time-alt = %H:%M
+
+format-prefix = 
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = ${colors.base0D}
+
+label = %date% %time%
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume = <label-volume> <bar-volume>
+label-volume = %percentage%%
+label-volume-foreground = ${root.foreground}
+
+label-muted = 🔇 muted
+label-muted-foreground = ${colors.base03}
+
+bar-volume-width = 10
+bar-volume-foreground-0 = ${colors.base0B}
+bar-volume-foreground-1 = ${colors.base0B}
+bar-volume-foreground-2 = ${colors.base0B}
+bar-volume-foreground-3 = ${colors.base0B}
+bar-volume-foreground-4 = ${colors.base0B}
+bar-volume-foreground-5 = ${colors.base0A}
+bar-volume-foreground-6 = ${colors.base08}
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground-alt}
+
+;click-right = pavucontrol &
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;pseudo-transparency = false
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+; vim:ft=dosini
