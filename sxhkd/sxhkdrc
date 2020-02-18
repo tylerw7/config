@@ -1,7 +1,7 @@
 # === System Volume Controls ===
 # volume {increase, decrease} by 5%
 alt + {i,u}
-  ~/.scripts/{inc,dec}_vol.sh
+  pamixer -{i,d} 5
 
 # === Music (MPD) Controls ===
 # prev, next track
@@ -10,7 +10,7 @@ ctrl + {j,k}
 
 # play/pause
 alt + shift + p
-  mpc -q toggle && pkill -SIGRTMIN+10 i3blocks
+  mpc -q toggle
 
 # mpd volume {increase, decrease} by 5%
 alt + {n,m}
@@ -18,9 +18,9 @@ alt + {n,m}
 
 # seek backward, forward {5,30} sec
 alt + shift + {u,i}
-  mpc -q seek {-,+}00:00:05 && pkill -SIGRTMIN+10 i3blocks
+  mpc -q seek {-,+}00:00:05
 alt + shift + {n,m}
-  mpc -q seek {-,+}00:00:30 && pkill -SIGRTMIN+10 i3blocks
+  mpc -q seek {-,+}00:00:30
 
 # === Launch Programs ===
 # Terminal
