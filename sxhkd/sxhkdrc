@@ -3,6 +3,10 @@
 alt + {i,u}
   pamixer -{i,d} 5
 
+# toggle mute
+alt + y
+  pamixer -t
+
 # === Music (MPD) Controls ===
 # prev, next track
 ctrl + {j,k}
@@ -38,7 +42,7 @@ alt + d
 # === Desktop Bindings ===
 # Lock
 super + shift + l
-  i3lock -i ~/.bg
+  i3lock -i ~/Pictures/Backgrounds/.lock
 
 # Shutdown, Reboot, exit WM, reload config
 alt + x
@@ -47,7 +51,8 @@ alt + shift + x
   ~/.scripts/prompt.sh "Shutdown?" "shutdown -h now"
 alt + shift + e
   ~/.scripts/prompt.sh "Exit i3?" "i3-msg exit"
-# i3 uses alt + shift + r to reload
+
+# reload sxhkd
 super + shift + r
   pkill -SIGUSR1 sxhkd
 

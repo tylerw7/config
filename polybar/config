@@ -33,8 +33,10 @@ base0D = #81a2be
 base0E = #b294bb 
 base0F = #a3685a 
 
-background = ${self.base00}
-background-alt = ${self.base01}
+;background = ${self.base00}
+background = #771d1f21
+;background-alt = ${self.base01}
+background-alt = #77282a2e
 foreground = ${self.base06}
 foreground-alt = ${self.base02}
 primary = ${self.base0A}
@@ -47,7 +49,7 @@ height = 27
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 6.0
-fixed-center = false
+fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -55,7 +57,7 @@ foreground = ${colors.foreground}
 line-size = 3
 line-color = #f00
 
-border-size = 4
+border-size = 0
 border-color = #1d1f2100
 
 padding-left = 0
@@ -83,16 +85,16 @@ cursor-scroll = ns-resize
 
 [bar/bar1]
 inherit = base/bar
-monitor = DP-1
-modules-left = i3
-; modules-center = mpd
+monitor = ${env:MONITOR1:DP-1}
+; modules-left = mpd
+modules-center = i3
 modules-right = filesystem pulseaudio xkeyboard memory cpu eth date
 
 [bar/bar2]
 inherit = base/bar
-monitor = HDMI-1
-modules-left = i3
-; modules-center =
+monitor = ${env:MONITOR2:HDMI-1}
+; modules-left =
+modules-center = i3
 modules-right = date
 
 [module/xkeyboard]
@@ -119,7 +121,7 @@ mount-0 = /
 mount-1 = /home
 
 ; mount points text base0D color
-label-mounted = %{F#81a2be}%mountpoint%%{F-}: %used% / %total%%
+label-mounted = %{F#81a2be}%mountpoint%%{F-}: %used% / %total%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -149,7 +151,7 @@ label-unfocused-padding = 2
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
 label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${self.label-focused-underline}
+label-visible-underline = ${self.label-focused-background}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
