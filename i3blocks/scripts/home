@@ -2,4 +2,5 @@
 
 available=$(df -h ~ | awk 'FNR == 2 {print $4}')
 
-printf "🗃️ %s" $available
+echo $(printf "💾 %s" $available)
+

@@ -1,11 +1,11 @@
 # === System Volume Controls ===
 # volume {increase, decrease} by 5%
 alt + {i,u}
-  pamixer -{i,d} 5
+  ~/.scripts/{inc,dec}_vol
 
 # toggle mute
 alt + y
-  pamixer -t
+  ~/.scripts/tog_vol
 
 # === Music (MPD) Controls ===
 # prev, next track
@@ -46,11 +46,11 @@ super + shift + l
 
 # Shutdown, Reboot, exit WM, reload config
 alt + x
-  ~/.scripts/prompt.sh "Reboot?" "reboot"
+  ~/.scripts/prompt "Reboot?" "reboot"
 alt + shift + x
-  ~/.scripts/prompt.sh "Shutdown?" "shutdown -h now"
+  ~/.scripts/prompt "Shutdown?" "shutdown -h now"
 alt + shift + e
-  ~/.scripts/prompt.sh "Exit i3?" "i3-msg exit"
+  ~/.scripts/prompt "Exit i3?" "i3-msg exit"
 
 # reload sxhkd
 super + shift + r

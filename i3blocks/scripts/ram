@@ -1,6 +1,4 @@
 #!/bin/bash
 
-ram=$(free -h | awk 'FNR == 2 {print $3 " / " $7}')
-
-printf "🐏 %s" "$ram"
+free -h | awk 'FNR == 2 {print "🐏" $3 "/" $7}'
 

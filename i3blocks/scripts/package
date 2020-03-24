@@ -1,4 +1,4 @@
 #!/bin/bash
 
-printf "📦 %s" $(pacman -Qu | wc -l)
+echo $(printf "📦 %s" $(pacman -Qu | wc -l))
 

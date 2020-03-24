@@ -2,5 +2,5 @@
 
 date_time=$(date '+%D %r')
 
-printf "📅 %s" "$date_time"
+echo $(printf "📅 %s" "$date_time")
 

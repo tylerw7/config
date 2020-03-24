@@ -5,14 +5,15 @@ interval=3600
 color=#cc6666
 
 [home]
+command=df -h ~ | awk 'FNR == 2 { print "💾" $4 }'
 interval=600
 
 [ram]
 interval=30
 
-# [music]
-# interval=1
-# signal=10
+#[music]
+#interval=1
+#signal=10
 
 [sound]
 interval=once

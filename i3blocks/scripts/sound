@@ -1,14 +1,14 @@
 #!/bin/bash
 
 if [[ $(pamixer --get-mute) = "false" ]]; then
-	volume=$(pamixer --get-volume | awk '{print $1}')
+	volume=$(pamixer --get-volume) 
 	
 	if [[ $volume -le 33 ]]; then
-		printf "🔈 %d%%" $volume
+		echo $(printf "🔈 %d%%" $volume)
 	elif [[ $volume -le 66 ]]; then
-		printf "🔉 %d%%" $volume
+		echo $(printf "🔉 %d%%" $volume)
 	else
-		printf "🔊 %d%%" $volume
+		echo $(printf "🔊 %d%%" $volume)
 	fi
 else
 	echo "🔇"
