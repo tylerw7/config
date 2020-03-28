@@ -159,6 +159,5 @@ set $gap_size 7
 gaps inner $gap_size
 
 # extra i3 specific start up
-# set background with bg sym link
-exec feh --bg-scale ~/Pictures/Backgrounds/.bg
+exec feh --bg-scale ~/.cache/bg
 

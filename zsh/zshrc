@@ -1,0 +1,36 @@
+# history
+[[ ! -f $XDG_CACHE_HOME/zsh/histfile ]] && mkdir $XDG_CACHE_HOME/zsh && touch $XDG_CACHE_HOME/zsh/histfile
+HISTFILE=$XDG_CACHE_HOME/zsh/histfile
+HISTSIZE=10000
+SAVEHIST=10000
+
+# vi mode
+bindkey -v
+zstyle :compinstall filename '~/.config/zsh/zshrc'
+
+# completion
+autoload -Uz compinit
+compinit
+
+# shared aliases
+[[ -f $XDG_DATA_HOME/aliases ]] && . $XDG_DATA_HOME/aliases
+
+# fzf
+fzfShow() { fzf }
+zle -N fzfShow
+# todo, use terminfo to get keybindings (Ctrl, Shift, etc.)
+bindkey -- "^f" fzfShow
+if ([[ -f /usr/bin/fzf ]] || [[ -f /usr/local/bin/fzf ]]); then
+	[[ -f /usr/share/fzf/key-bindings.zsh ]] && . /usr/share/fzf/key-bindings.zsh
+	[[ -f /usr/share/fzf/completion.zsh ]] && . /usr/share/fzf/completion.zsh
+fi
+
+PS1='%F{#7154ab}[%B%F{red}%n%b%F{#cda632}@%B%F{green}%M%b%f %B%F{blue}%~%b%F{#7154ab}]%f$ '
+
+# bash like help
+autoload -Uz run-help
+unalias run-help
+alias help=run-help
+
+# Fish-like syntax highlighting
+[[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && . /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

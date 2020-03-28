@@ -42,7 +42,7 @@ alt + d
 # === Desktop Bindings ===
 # Lock
 super + shift + l
-  i3lock -i ~/Pictures/Backgrounds/.lock
+  i3lock -i ~/.cache/lock
 
 # Shutdown, Reboot, exit WM, reload config
 alt + x
