@@ -1,11 +1,11 @@
 # === System Volume Controls ===
 # volume {increase, decrease} by 5%
 alt + {i,u}
-  ~/.scripts/{inc,dec}_vol
+  ~/.local/bin/{inc,dec}_vol
 
 # toggle mute
 alt + y
-  ~/.scripts/tog_vol
+  ~/.local/bin/tog_vol
 
 # === Music (MPD) Controls ===
 # prev, next track
@@ -46,11 +46,15 @@ super + shift + l
 
 # Shutdown, Reboot, exit WM, reload config
 alt + x
-  ~/.scripts/prompt "Reboot?" "reboot"
+  ~/.local/bin/prompt "Reboot?" "reboot"
 alt + shift + x
-  ~/.scripts/prompt "Shutdown?" "shutdown -h now"
+  ~/.local/bin/prompt "Shutdown?" "shutdown -h now"
 alt + shift + e
-  ~/.scripts/prompt "Exit i3?" "i3-msg exit"
+  ~/.local/bin/prompt "Exit i3?" "i3-msg exit"
+
+# emoji script
+ctrl + alt + e
+  ~/.local/bin/dmenuunicode
 
 # reload sxhkd
 super + shift + r

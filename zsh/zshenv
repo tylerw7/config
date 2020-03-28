@@ -1,2 +1,5 @@
 [[ -f ~/.local/share/env ]] && . ~/.local/share/env
 EDITOR=vim
+typeset -U PATH path
+path=("$HOME/.local/bin" "$path[@]")
+export PATH
