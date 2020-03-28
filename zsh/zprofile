@@ -1,1 +1,2 @@
 [[ -f ~/.local/share/env ]] && . ~/.local/share/env
+eval $(ssh-agent) > /dev/null
