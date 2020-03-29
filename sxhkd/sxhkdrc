@@ -33,7 +33,7 @@ alt + Return
 
 # Launch Programs {editor, web}
 alt + o; {e,w}
-  {alacritty -e emacs -nw, firefox-developer-edition}
+  {emacs, firefox-developer-edition}
 
 # Program launcher
 alt + d

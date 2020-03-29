@@ -1,6 +1,6 @@
 # keybindings
-map <C-=> zoom in
-map <C--> zoom out
+map <C-K> zoom in
+map <C-J> zoom out
 
 # settings
 set selection-clipboard clipboard
@@ -14,7 +14,7 @@ set font "monospace normal 12"
 # TODO: Add database support for bookmarks and input history
 set database "null"
 # none, normal, strict (this disables bookmarking and input history)
-set sandbox "strict"
+set sandbox "normal"
 
 set filemonitor "glib"
 

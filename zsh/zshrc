@@ -17,10 +17,10 @@ compinit
 [[ -f $XDG_DATA_HOME/aliases ]] && . $XDG_DATA_HOME/aliases
 
 # fzf
-fzfShow() { fzf }
-zle -N fzfShow
+fzfOpen() { xdg-open $(find $(pwd) | fzf) }
+zle -N fzfOpen
 # todo, use terminfo to get keybindings (Ctrl, Shift, etc.)
-bindkey -- "^f" fzfShow
+bindkey -- "^f" fzfOpen
 if ([[ -f /usr/bin/fzf ]] || [[ -f /usr/local/bin/fzf ]]); then
 	[[ -f /usr/share/fzf/key-bindings.zsh ]] && . /usr/share/fzf/key-bindings.zsh
 	[[ -f /usr/share/fzf/completion.zsh ]] && . /usr/share/fzf/completion.zsh
