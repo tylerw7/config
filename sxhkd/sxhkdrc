@@ -31,9 +31,9 @@ alt + shift + {n,m}
 alt + Return
   alacritty
 
-# Launch Programs {editor, web}
-alt + o; {e,w}
-  {emacs, firefox-developer-edition}
+# Launch Programs {editor, web, private web}
+alt + o; {e,w,shift + w}
+  {emacs, firefox-developer-edition, firefox-developer-edition --private-window}
 
 # Program launcher
 alt + d
@@ -42,7 +42,7 @@ alt + d
 # === Desktop Bindings ===
 # Lock
 super + shift + l
-  i3lock -i ~/.cache/lock
+  i3lock -i ~/.cache/lock -c 000000
 
 # Shutdown, Reboot, exit WM, reload config
 alt + x
