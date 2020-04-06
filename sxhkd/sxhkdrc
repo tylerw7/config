@@ -29,7 +29,7 @@ alt + shift + {n,m}
 # === Launch Programs ===
 # Terminal
 alt + Return
-  alacritty
+  ($TERMINAL || xterm)
 
 # Launch Programs {editor, web, private web}
 alt + o; {e,w,shift + w}

@@ -63,27 +63,27 @@
     # Set to 0 to disable.
     frame_width = 2
 
-    # Base16 google dark
-    frame_color = "#c5c8c6"
-    separator_color = "#c5c8c6"
 
-    [base16_low]
-    	msg_urgency = low
-    	background = "#282a2e"
-    	foreground = "#969896"
+	frame_color = "#e9e9f4"
+	separator_color = "#e9e9f4"
 
-    [base16_normal]
-    	msg_urgency = normal
-    	background = "#373b41"
-    	foreground = "#c5c8c6"
+	[base16_low]
+		msg_urgency = low
+		background = "#3a3c4e"
+		foreground = "#4d4f68"
 
-    [base16_critical]
-    	msg_urgency = critical
-    	background = "#CC342B"
-    	foreground = "#e0e0e0"
+	[base16_normal]
+		msg_urgency = normal
+		background = "#626483"
+		foreground = "#e9e9f4"
 
-    # Sort messages by urgency.
-    sort = yes
+	[base16_critical]
+		msg_urgency = critical
+		background = "#ea51b2"
+		foreground = "#f1f2f8"
+
+	# Sort messages by urgency.
+	sort = yes
 
     # Don't remove messages, if the user is idle (no mouse or keyboard input)
     # for longer than idle_threshold seconds.

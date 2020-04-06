@@ -1,4 +1,0 @@
-#!/bin/bash
-
-echo $(printf "📦 %s" $(pacman -Qu | wc -l))
-

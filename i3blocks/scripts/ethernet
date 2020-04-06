@@ -1,4 +1,0 @@
-#!/bin/bash
-
-ip -h -f inet addr | grep enp3s0 | awk 'FNR == 2 {print "🌐" $2}'
-
