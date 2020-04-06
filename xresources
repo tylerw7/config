@@ -62,6 +62,12 @@ dwm.selbordercolor:	base05
 dwm.selbgcolor:		base0D
 dwm.selfgcolor:		base00
 
+! dmenu base16 colors
+dmenu.background:	base00
+dmenu.foreground:	base05
+dmenu.selbackground:	base0D
+dmenu.selforeground:	base00
+
 *font: monospace:size=18
 
 *termname: st
