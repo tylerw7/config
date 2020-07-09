@@ -57,9 +57,11 @@
 ! dwm base16 colors
 dwm.normbordercolor:	base01
 dwm.normbgcolor:	base00
+! dwm.normfgcolor:	base05
+! dwm.selbordercolor:	base05
 dwm.normfgcolor:	base05
-dwm.selbordercolor:	base05
-dwm.selbgcolor:		base0D
+dwm.selbordercolor:	base0D
+dwm.selbgcolor:		base09
 dwm.selfgcolor:		base00
 
 ! dmenu base16 colors

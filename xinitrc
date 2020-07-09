@@ -4,5 +4,4 @@ picom --vsync -b &
 sxhkd &
 # mpd &
 # mpc volume 50 &
-exec i3
-# ~/.local/bin/launch_dwm
+~/.local/bin/launch_wm

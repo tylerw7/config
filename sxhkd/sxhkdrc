@@ -1,10 +1,10 @@
 # === System Volume Controls ===
 # volume {increase, decrease} by 5%
-alt + {i,u}
+XF86Audio{Raise,Lower}Volume
   ~/.local/bin/{inc,dec}_vol
 
 # toggle mute
-alt + y
+XF86AudioMute
   ~/.local/bin/tog_vol
 
 # === Music (MPD) Controls ===
@@ -17,14 +17,14 @@ alt + shift + p
   mpc -q toggle
 
 # mpd volume {increase, decrease} by 5%
-alt + {n,m}
-  mpc -q volume {-,+}5
+#alt + {n,m}
+#  mpc -q volume {-,+}5
 
 # seek backward, forward {5,30} sec
-alt + shift + {u,i}
-  mpc -q seek {-,+}00:00:05
-alt + shift + {n,m}
-  mpc -q seek {-,+}00:00:30
+#alt + shift + {u,i}
+#  mpc -q seek {-,+}00:00:05
+#alt + shift + {n,m}
+#  mpc -q seek {-,+}00:00:30
 
 # === Launch Programs ===
 # Terminal
@@ -32,11 +32,11 @@ alt + Return
   ($TERMINAL || xterm)
 
 # Launch Programs {editor, web, private web}
-alt + o; {e,w,shift + w}
-  {emacs, firefox-developer-edition, firefox-developer-edition --private-window}
+alt + o; {e,w}
+  {emacs, firefox-developer-edition} 
 
 # Program launcher
-alt + d
+alt + shift + d
   dmenu_run
 
 # === Desktop Bindings ===
@@ -50,7 +50,7 @@ alt + x
 alt + shift + x
   ~/.local/bin/prompt "Shutdown?" "shutdown -h now"
 alt + shift + e
-  ~/.local/bin/prompt "Exit i3?" "i3-msg exit"
+  ~/.local/bin/prompt "Exit?" "killall dwm"
 
 # emoji script
 ctrl + alt + e
@@ -60,9 +60,7 @@ ctrl + alt + e
 super + shift + r
   pkill -SIGUSR1 sxhkd
 
-# Sleep
-
-# Screenshot (tmp)
-
-# Screenshot (permanent)
+# Screenshot
+Print
+  ~/.local/bin/screenshot
 

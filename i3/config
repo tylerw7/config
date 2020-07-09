@@ -159,5 +159,6 @@ set $gap_size 7
 gaps inner $gap_size
 
 # extra i3 specific start up
-exec feh --bg-scale ~/.cache/bg
+# exec feh --bg-scale ~/.cache/bg
+exec xwallpaper --zoom ~/.cache/bg
 
