@@ -4,4 +4,4 @@ picom --vsync -b &
 sxhkd &
 # mpd &
 # mpc volume 50 &
-~/.local/bin/launch_wm
+xwallpaper --zoom ~/.cache/bg && ~/.local/bin/launch_wm 
