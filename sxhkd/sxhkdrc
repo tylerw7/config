@@ -1,4 +1,4 @@
-# === System Volume Controls ===
+# === System Volume Controls ===l;
 # volume {increase, decrease} by 5%
 XF86Audio{Raise,Lower}Volume
   ~/.local/bin/{inc,dec}_vol
@@ -32,8 +32,8 @@ alt + Return
   ($TERMINAL || xterm)
 
 # Launch Programs {editor, web, private web}
-alt + o; {e,w}
-  {emacs, firefox-developer-edition} 
+alt + o; {e,w,W}
+  {emacs, firefox-developer-edition, torbrowser-launcher} 
 
 # Program launcher
 alt + shift + d
@@ -46,7 +46,7 @@ super + shift + l
 
 # Shutdown, Reboot, exit WM, reload config
 alt + x
-  ~/.local/bin/prompt "Reboot?" "reboot"
+   ~/.local/bin/prompt "Reboot?" "reboot"
 alt + shift + x
   ~/.local/bin/prompt "Shutdown?" "shutdown -h now"
 alt + shift + e

@@ -1,5 +1,10 @@
 dunst &
-xrandr --output HDMI1 --mode 1920x1080 --rate 60 --output DP-1-2 --mode 2560x1440 --rate 165 --left-of HDMI1 &
+
+(xrandr \
+--output DP-2 --mode 2560x1440 --rate 60 --primary \
+--output DP-1 --mode 2560x1440 --rate 144 --right-of DP-2 \
+--output DP-3 --mode 2560x1440 --rate 60 --right-of DP-1 --rotate left) &
+
 picom --vsync -b &
 sxhkd &
 # mpd &
